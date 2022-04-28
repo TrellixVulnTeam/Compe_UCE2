@@ -1,0 +1,18 @@
+.trendingCategories {
+    margin-bottom: 1rem;
+}
+
+.trendingCategories__container h1{
+    margin-bottom: 0.5rem;
+}
+
+.trendingCategories__container__flex {
+    display: flex;
+}
+
+.trendingCategories__container__flex div {
+    width: 30.9%;
+    height: 5rem;
+    margin-right: 3%;
+    background-color: var(--normalAzul);
+}
