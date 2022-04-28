@@ -1,3 +1,13 @@
 .header {
     background-color: var(--cinzaAzul);
 }
+
+.header__container {
+    display: flex;
+    padding: 0.5rem 0;
+    justify-content: space-between;
+}
+
+.header__container img:last-child {
+    height: 1.5rem;
+}
