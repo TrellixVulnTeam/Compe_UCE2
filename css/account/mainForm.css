@@ -1,0 +1,37 @@
+.mainForm {
+    height: 100vh;
+    padding: 6% 0;
+}
+
+.mainForm__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainForm__form__inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.mainForm__form__inputs__login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.mainForm__form__inputs__fields {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 2px solid var(--escuroAzul);
+}
+
+.mainForm__form__inputs__labels {
+    color: var(--escuroAzul);
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+a {
+    margin-top: 1rem;
+}
