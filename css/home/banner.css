@@ -1,4 +1,5 @@
 .banner {
     background-color: var(--escuroAzul);
     height: 150px;
+    margin-bottom: 1rem;
 }
