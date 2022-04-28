@@ -25,13 +25,13 @@
     <header class="header">
         <div class="container header__container">
             <img src="" alt="">
-            <Button id="openButton" onclick="alert('hello world')"><img src="./icons/menuIcon.svg" alt=""></Button>
+            <Button onclick="openMenu()"><img src="./icons/menuIcon.svg" alt=""></Button>
         </div>
     </header>
     <!-- SideBar -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebarid">
         <ul>
-            <li><Button id="closeButton">Close</Button></li>
+            <li><Button onclick="closeMenu()">Close</Button></li>
             <li><a href="">Home</a></li>
             <li><a href="">Account</a></li>
             <li><a href="">Suppliers</a></li>
@@ -103,12 +103,12 @@
         </div>
     </footer>
     <script>
-        function openLeftMenu() {
-            document.getElementById("openButton").style.display = "block";
+        function openMenu() {
+            document.getElementById("sidebarid").style.display = "block";
         }
 
-        function closeLeftMenu() {
-            document.getElementById("closeButton").style.display = "none";
+        function closeMenu() {
+            document.getElementById("sidebarid").style.display = "none";
         }
     </script>
 </body>
