@@ -1,3 +1,23 @@
 .suppliers {
     margin-bottom: 1rem;
 }
+
+.suppliers__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.suppliers__container h1{
+    margin-bottom: 0.5rem;
+}
+
+.suppliers__container__flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.suppliers__container__flex div {
+    width: 30%;
+    height: 5rem;
+    background-color: var(--normalAzul);
+}
