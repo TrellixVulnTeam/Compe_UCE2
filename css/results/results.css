@@ -1,0 +1,25 @@
+.results {
+    margin-bottom: 2rem;
+}
+
+.results__container__cards {
+    display: flex;
+    border-top: 1px solid var(--escuroAzul);
+}
+
+.results__container__cards__right {
+    flex-grow: 1;
+    padding: 0 1rem;
+    padding-top: 0.3rem;
+}
+
+.results__container__cards__right__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.results__container__cards__right__info li {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
