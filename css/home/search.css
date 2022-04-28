@@ -1,3 +1,11 @@
 .form__container {
     padding: 0.5rem 0;
+    display: flex;
+}
+
+.input-padrao {
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
 }
