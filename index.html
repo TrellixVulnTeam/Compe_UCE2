@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/home/categories.css">
     <link rel="stylesheet" href="./css/home/suppliers.css">
     <link rel="stylesheet" href="./css/home/trendingCategories.css">
+    <link rel="stylesheet" href="./css/geral/sidebar.css">
     <title>Fornex</title>
 </head>
 
@@ -24,9 +25,18 @@
     <header class="header">
         <div class="container header__container">
             <img src="" alt="">
-            <img src="./icons/menuIcon.svg" alt="">
+            <Button id="openButton" onclick="alert('hello world')"><img src="./icons/menuIcon.svg" alt=""></Button>
         </div>
     </header>
+    <!-- SideBar -->
+    <div class="sidebar">
+        <ul>
+            <li><Button id="closeButton">Close</Button></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Account</a></li>
+            <li><a href="">Suppliers</a></li>
+        </ul>
+    </div>
     <section>
         <div class="container form__container">
             <input type="text" placeholder="Search" class="input-padrao">
@@ -47,12 +57,12 @@
             </div>
         </div>
     </section>
-    <section class="banner"> 
+    <section class="banner">
         <div>
             <img src="" alt="">
         </div>
     </section>
-    <section class="categories"> 
+    <section class="categories">
         <div class="container categories__container">
             <h1>Categories</h1>
             <div class="categories__container__cat">
@@ -92,6 +102,15 @@
             <p>Copyright 2022</p>
         </div>
     </footer>
+    <script>
+        function openLeftMenu() {
+            document.getElementById("openButton").style.display = "block";
+        }
+
+        function closeLeftMenu() {
+            document.getElementById("closeButton").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
