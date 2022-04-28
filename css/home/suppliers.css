@@ -13,11 +13,11 @@
 
 .suppliers__container__flex {
     display: flex;
-    justify-content: space-between;
 }
 
 .suppliers__container__flex div {
     width: 30%;
     height: 5rem;
+    margin-right: 3%;
     background-color: var(--normalAzul);
 }

@@ -1,0 +1,26 @@
+.categories {
+    margin-bottom: 1rem;
+}
+
+.categories__container h1 {
+    margin-bottom: 0.5rem;
+}
+
+.categories__container__cat {
+    display: flex;
+}
+
+.categories__container__cat__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 5rem;
+    margin-right: 3%;
+}
+
+.categories__container__cat__card img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0.3rem;
+}
