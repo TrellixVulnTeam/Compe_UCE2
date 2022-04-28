@@ -1,8 +1,18 @@
 :root {
     --escuroAzul: #0F044C;
     --normalAzul: #141E61;
-    --cinzaAzul: #787A91;
+    --cinzaAzul: #787a91;
+    --footerAzul: #41424f;
     --claroCinza: #EEEEEE; 
 
     --roboto: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--claroCinza);
+    font-family: var(--roboto);
+}
+
+.container {
+    margin: 0 3%;
 }
