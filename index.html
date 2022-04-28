@@ -103,12 +103,15 @@
         </div>
     </footer>
     <script>
+        wasClicked = false;
         function openMenu() {
-            document.getElementById("sidebarid").style.display = "block";
-        }
-
-        function closeMenu() {
-            document.getElementById("sidebarid").style.display = "none";
+            if (!wasClicked) {
+                document.getElementById("sidebarid").style.display = "block";
+                wasClicked = true;
+            } else {
+                document.getElementById("sidebarid").style.display = "none";
+                wasClicked = false;
+            }
         }
     </script>
 </body>
