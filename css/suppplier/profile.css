@@ -1,0 +1,27 @@
+.profile {
+    margin: 1rem 0;
+}
+
+.profile__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__container__top {
+    display: flex;
+    justify-content: center;
+}
+
+.profile__container__top img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.profile__container__bottom {
+    margin-top: 1rem;
+}
+
+.profile__container__bottom h1 {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
