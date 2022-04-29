@@ -1,0 +1,13 @@
+.map {
+    display: flex;
+    flex-direction: column;
+}
+
+.map__container__top {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.map__container__top h1 {
+    font-size: 1.3rem;
+}
