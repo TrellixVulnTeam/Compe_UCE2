@@ -25,6 +25,12 @@
     padding: 0rem 1rem;
 }
 
+.profileCard__container__info a {
+    text-decoration: none;
+    color: var(--escuroAzul);
+}
+
 .profileCard__container__info button {
     padding: 0.3rem;
+    width: 100%;
 }
