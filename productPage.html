@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="./css/results/title.css">
     <link rel="stylesheet" href="./css/results/results.css">
     <link rel="stylesheet" href="./css/home/search.css">
+    <link rel="stylesheet" href="./css/product/backBar.css">
+    <link rel="stylesheet" href="./css/product/card.css">
+    <link rel="stylesheet" href="./css/product/profileCard.css">
     <title>Fornex</title>
 </head>
 
@@ -34,42 +37,52 @@
             <li><a href="suppliers.html">Suppliers</a></li>
         </ul>
     </div>
-    <section>
-        <div class="container form__container">
-            <input type="text" placeholder="Search" class="input-padrao">
+    <section class="backBar">
+        <div class="container backBar__container">
+            <a href=""><img src="./icons/chevronLeftIcon.svg" alt=""></a>
+        </div>
+    </section>
+    <section class="card">
+        <div class="container card__container">
+            <div class="card__container__top">
+                <h1>Supplier name</h1>
+                <h1>Supplier location</h1>
+            </div>
+            <img src="" alt="" class="card__container__img">
+            <div class="card__container__info">
+                <h2>Product name</h2>
+                <h2>Avg Price</h2>
+                <h2>Min Qnt</h2>
+            </div>
+            <button class="card__container__button">Contact Now</button>
+        </div>
+    </section>
+    <section class="profileCard">
+        <div class="container profileCard__container">
+            <div class="profileCard__container__img">
+                <img src="" alt="">
+            </div>
+            <div class="profileCard__container__info">
+                <h1>Supplier info</h1>
+                <button>Profile</button>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="container">
+            <h1>Product Specs</h1>
+            <p>Lorem Ipsum Lorem Ipsum</p>
         </div>
     </section>
     <section>
-        <div class="container title__container">
-            <h1>Results for...</h1>
-        </div>
-    </section>
-    <section class="results">
-        <div class="results__container">
-            <a href="productPage.html">
-                <div class="results__container__cards">
-                    <img src="" alt="" width="140px" height="140px">
-                    <div class="results__container__cards__right">
-                        <ul class="results__container__cards__right__info">
-                            <li>Product name</li>
-                            <li>Supplier name</li>
-                            <li>Location</li>
-                            <li>Avg price</li>
-                            <li>Min Qnt</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <div class="results__container__cards">
-                <img src="" alt="" width="140px" height="140px">
-                <div class="results__container__cards__right">
-                    <ul class="results__container__cards__right__info">
-                        <li>Product name2</li>
-                        <li>Supplier name2</li>
-                        <li>Location2</li>
-                        <li>Avg price2</li>
-                        <li>Min Qnt2</li>
-                    </ul>
+        <div class="container">
+            <h1>Other Products</h1>
+            <div class="trendingCategories__container">
+                <h1>Trending Categories</h1>
+                <div class="trendingCategories__container__flex">
+                    <div>item1</div>
+                    <div>item2</div>
+                    <div>item3</div>
                 </div>
             </div>
         </div>

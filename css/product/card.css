@@ -1,0 +1,40 @@
+.card {
+    background-color: var(--cinzaAzul);
+}
+
+.card__container {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__container__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.card__container__top h1{
+    font-size: 1.3rem;
+}
+
+.card__container__img {
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+
+.card__container__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.card__container__info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.card__container__button {
+    padding: 0.8em;
+}
