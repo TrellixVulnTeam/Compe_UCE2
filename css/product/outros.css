@@ -1,0 +1,19 @@
+.outros {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.outros__container h1{
+    margin-bottom: 0.5rem;
+}
+
+.outros__container__flex {
+    display: flex;
+}
+
+.outros__container__flex div {
+    width: 30.9%;
+    height: 6rem;
+    margin-right: 3%;
+    background-color: var(--normalAzul);
+}
