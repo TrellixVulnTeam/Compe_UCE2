@@ -1,0 +1,20 @@
+.contact {
+    margin-top: 1rem;
+}
+
+.contact__container {
+    background-color: var(--footerAzul);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__container__top h1 {
+    width: 100%;
+    margin-bottom: 0.7rem;
+}
+
+.contact__container__bottom button {
+    width: 100%;
+    padding: 0.5rem;
+}

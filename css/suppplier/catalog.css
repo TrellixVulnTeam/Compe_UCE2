@@ -1,0 +1,32 @@
+.catalog {
+    margin-top: 1rem;
+}
+
+.catalog__container__top {
+    margin-bottom: 0.7rem;
+}
+
+.catalog__container__top h1 {
+    font-size: 1.3rem;
+}
+
+.catalog__container__bottom {
+    padding: 1rem;
+    background-color: var(--footerAzul);
+}
+
+.catalog__container__bottom__img {
+    width: 100%;
+    height: 9rem;
+    margin-bottom: 1rem;
+}
+
+.catalog__container__bottom__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.catalog__container__bottom__button button {
+    width: 100%;
+    padding: 0.5rem 0;
+}
