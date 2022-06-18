@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/87bd687d44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/geral/reset.css">
+    <link rel="stylesheet" href="./css/geral/base.css">
+    <link rel="stylesheet" href="./css/geral/header.css">
+    <link rel="stylesheet" href="./css/geral/footer.css">
+    <link rel="stylesheet" href="./css/geral/sidebar.css">
+    <link rel="stylesheet" href="./css/admin/admin.css">
+    <title>Fornex</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <img src="" alt="">
+            <img onclick="openMenu()" src="./icons/menuIcon.svg" alt="">
+        </div>
+    </header>
+    <!-- SideBar -->
+    <div class="sidebar" id="sidebarid">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="suppliers.html">Suppliers</a></li>
+        </ul>
+    </div>
+    <main class="mainForm"> 
+        <div class="container mainForm__admin">
+            <input type="text" placeholder="Empresa">
+            <input type="text" placeholder="CNPJ">
+            <input type="text" placeholder="Categoria">
+            <input type="text" placeholder="Localização">
+            <button>Adicionar</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="suppliers.html">Suppliers</a></li>
+            </ul>
+            <img src="" alt="">
+            <p>Copyright 2022</p>
+        </div>
+    </footer>
+    <script>
+        wasClicked = false;
+        function openMenu() {
+            if (!wasClicked) {
+                document.getElementById("sidebarid").style.display = "block";
+                wasClicked = true;
+            } else {
+                document.getElementById("sidebarid").style.display = "none";
+                wasClicked = false;
+            }
+        }
+    </script>
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

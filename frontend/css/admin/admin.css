@@ -1,0 +1,22 @@
+.mainForm {
+    height: 100vh;
+    padding: 6% 0;
+}
+
+.mainForm__admin {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.mainForm__admin input {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 2px solid var(--escuroAzul);
+}
+
+.mainForm__admin button {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 2px solid var(--escuroAzul);
+}
