@@ -7,18 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/geral/reset.css">
-    <link rel="stylesheet" href="./css/geral/base.css">
-    <link rel="stylesheet" href="./css/geral/header.css">
-    <link rel="stylesheet" href="./css/geral/footer.css">
-    <link rel="stylesheet" href="./css/geral/sidebar.css">
-    <link rel="stylesheet" href="./css/results/title.css">
-    <link rel="stylesheet" href="./css/results/results.css">
-    <link rel="stylesheet" href="./css/home/search.css">
+    <link rel="stylesheet" href="/css/geral/reset.css">
+    <link rel="stylesheet" href="/css/geral/base.css">
+    <link rel="stylesheet" href="/css/geral/header.css">
+    <link rel="stylesheet" href="/css/geral/footer.css">
+    <link rel="stylesheet" href="/css/geral/sidebar.css">
+    <link rel="stylesheet" href="/css/results/title.css">
+    <link rel="stylesheet" href="/css/results/results.css">
+    <link rel="stylesheet" href="/css/home/search.css">
+    <script src="/js/resultsPage.js"></script>
     <title>Fornex</title>
 </head>
 
-<body>
+<body onload="loadSuppliers()">
     <header class="header">
         <div class="container header__container">
             <img src="" alt="">
@@ -44,33 +45,8 @@
         </div>
     </section>
     <section class="results">
-        <div class="results__container">
-            <a href="productPage.html">
-                <div class="results__container__cards">
-                    <img src="" alt="" width="140px" height="140px">
-                    <div class="results__container__cards__right">
-                        <ul class="results__container__cards__right__info">
-                            <li>Product name</li>
-                            <li>Supplier name</li>
-                            <li>Location</li>
-                            <li>Avg price</li>
-                            <li>Min Qnt</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <div class="results__container__cards">
-                <img src="" alt="" width="140px" height="140px">
-                <div class="results__container__cards__right">
-                    <ul class="results__container__cards__right__info">
-                        <li>Product name2</li>
-                        <li>Supplier name2</li>
-                        <li>Location2</li>
-                        <li>Avg price2</li>
-                        <li>Min Qnt2</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="results__container" id="resultsDisplay">
+        <!-- content loaded dynamically -->
         </div>
     </section>
     <footer class="footer">

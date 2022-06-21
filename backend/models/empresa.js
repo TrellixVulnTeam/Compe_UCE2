@@ -7,7 +7,6 @@ async function createTableEmpresas() {
 };
 
 async function addEmpresa(req, res) {
-    console.log(req.body);
     let cnpj = req.body.cnpj;
     let empresa = req.body.empresa;
     let categoria = req.body.categoria;
@@ -18,9 +17,17 @@ async function addEmpresa(req, res) {
     res.status(200).json({
         "statusCode": 200,
     });
-}
+};
+
+async function pegarEmpresas(req, res) {
+    openDb().then(db => {
+        db.all('SELECT * FROM empresas')
+            .then(empresas => res.json(empresas))
+    });
+};
 
 module.exports = {
     createTableEmpresas,
-    addEmpresa
+    addEmpresa,
+    pegarEmpresas
 }
