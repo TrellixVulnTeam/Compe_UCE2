@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/geral/footer.css">
     <link rel="stylesheet" href="./css/geral/sidebar.css">
     <link rel="stylesheet" href="./css/admin/admin.css">
+    <script src="/js/admin.js"></script>
     <title>Fornex</title>
 </head>
 
@@ -33,11 +34,13 @@
     </div>
     <main class="mainForm"> 
         <div class="container mainForm__admin">
-            <input type="text" placeholder="Empresa">
-            <input type="text" placeholder="CNPJ">
-            <input type="text" placeholder="Categoria">
-            <input type="text" placeholder="Localização">
-            <button>Adicionar</button>
+            <!-- forms to add empresa -->
+            <input type="text" placeholder="Empresa" id="empresa">
+            <input type="text" placeholder="CNPJ" id="cnpj">
+            <input type="text" placeholder="Categoria" id="categoria">
+            <input type="text" placeholder="Localização" id="localizacao">
+            <!-- button to add empresa -->
+            <button onclick="adicionarEmpresa()">Adicionar</button>
         </div>
     </main>
     <footer class="footer">

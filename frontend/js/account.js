@@ -6,7 +6,6 @@ function authenticateLogin() {
     let username = document.getElementById('username').value
     let password = document.getElementById('password').value
     if (username == adminCredencial.username && password == adminCredencial.password) {
-        location.href='/admin'
-        console.log(location.href);
+        document.location.href='/admin'
     }
 }
