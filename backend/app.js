@@ -29,6 +29,14 @@ app.get('/suppliers', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/resultsPage.html'))
 })
 
+// renderizando pagina admin
+app.get('/admin', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/admin.html'))
+})
+
+//adicionando empresa
+app.post('/api/adicionarEmpresa', pess.addEmpresa)
+
 //register new 
 app.post('/register', (req, res) => {
     let user = false;
