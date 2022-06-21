@@ -30,25 +30,24 @@ async function addUsuario(req, res) {
     // }
 }
 
-async function loginUsuario(req, res) {
-    let cpf = req.params.cpf
-    openDb().then(db => {
-        db.get('SELECT * FROM usuarios WHERE cpf=?', [cpf])
-            .then(pessoa => {
-                if (pessoa == null) {
-                    res.status(404).json({
-                        "message": "User not found"
-                    })
-                } else {
-                    res.status(200).json(pessoa)
-                }
-            })
-            .catch((err) => res.json(err))
-    });
-};
+// async function loginUsuario(req, res) {
+//     let cnpj = req.params.cnpj
+//     openDb().then(db => {
+//         db.get('SELECT * FROM usuarios WHERE cpf=?', [cnpj])
+//             .then(pessoa => {
+//                 if (pessoa == null) {
+//                     res.status(404).json({
+//                         "message": "User not found"
+//                     })
+//                 } else {
+//                     res.status(200).json(pessoa)
+//                 }
+//             })
+//             .catch((err) => res.json(err))
+//     });
+// };
 
 module.exports = {
     createTableUsuarios,
-    addUsuario,
-    loginUsuario
+    addUsuario
 }

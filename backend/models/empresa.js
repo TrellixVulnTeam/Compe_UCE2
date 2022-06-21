@@ -13,7 +13,7 @@ async function addEmpresa(req, res) {
     let localizacao = req.body.localizacao;
     let senha = req.body.senha;
     openDb().then(db => {
-        db.run('INSERT INTO empresas (cnpj, empresa, categoria, localizacao) VALUES (?,?,?,?,?)', [cnpj, empresa, categoria, localizacao, senha])
+        db.run('INSERT INTO empresas (cnpj, empresa, categoria, localizacao, senha) VALUES (?,?,?,?,?)', [cnpj, empresa, categoria, localizacao, senha])
     });
     res.status(200).json({
         "statusCode": 200,
@@ -27,8 +27,26 @@ async function pegarEmpresas(req, res) {
     });
 };
 
+async function loginUsuario(req, res) {
+    let cnpj = req.params.cnpj
+    openDb().then(db => {
+        db.get('SELECT * FROM empresas WHERE cnpj=?', [cnpj])
+            .then(pessoa => {
+                if (pessoa == null) {
+                    res.status(404).json({
+                        "message": "User not found"
+                    })
+                } else {
+                    res.status(200).json(pessoa)
+                }
+            })
+            .catch((err) => res.json(err))
+    });
+};
+
 module.exports = {
     createTableEmpresas,
     addEmpresa,
-    pegarEmpresas
+    pegarEmpresas,
+    loginUsuario
 }

@@ -1,20 +1,19 @@
 function authenticateLogin() {
     const adminCredencial = {
-        cpf: 'admin',
+        cnpj: 'admin',
         senha: 'admin123'
     }
-    let cpf = document.getElementById('cpf').value
+    let cnpj = document.getElementById('cnpj').value
     let senha = document.getElementById('senha').value
-    fetch(`http://localhost:3000/api/login/${cpf}`)
+    fetch(`http://localhost:3000/api/login/${cnpj}`)
         .then(res => res.json())
         .then(data => {
-            if (cpf == data.cpf && senha == data.senha) {
-                sessionStorage.setItem("userID", data.cpf)
-                document.location.href='/'
-            } else if (cpf == adminCredencial.cpf && senha == adminCredencial.senha) {
-                sessionStorage.setItem("userID", data.cpf)
-                document.location.href='/admin'
-                
+            if (cnpj == data.cnpj && senha == data.senha) {
+                sessionStorage.setItem("userID", data.cnpj)
+                document.location.href='/supplierProfile'
+            } else if (cnpj == adminCredencial.cnpj && senha == adminCredencial.senha) {
+                sessionStorage.setItem("userID", data.cnpj)
+                document.location.href='/admin'   
             }
         })
 }

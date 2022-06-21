@@ -36,6 +36,11 @@ app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/admin.html'))
 })
 
+//renderizando supplier profile
+app.get('/supplierProfile', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/supplierProfile.html'))
+})
+
 //adicionando empresa
 app.post('/api/adicionarEmpresa', pess.addEmpresa)
 
@@ -46,7 +51,7 @@ app.get('/api/pegarEmpresas', pess.pegarEmpresas)
 app.post('/api/register', usu.addUsuario)
 
 //login
-app.get('/api/login/:cpf', usu.loginUsuario)
+app.get('/api/login/:cnpj', pess.loginUsuario)
 
 app.listen(port, () => {
     console.log(`Servidor rodando http://localhost:${port}/`);
