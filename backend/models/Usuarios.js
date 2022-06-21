@@ -34,7 +34,16 @@ async function loginUsuario(req, res) {
     let cpf = req.params.cpf
     openDb().then(db => {
         db.get('SELECT * FROM usuarios WHERE cpf=?', [cpf])
-            .then(pessoa => res.json(pessoa));
+            .then(pessoa => {
+                if (pessoa == null) {
+                    res.status(404).json({
+                        "message": "User not found"
+                    })
+                } else {
+                    res.status(200).json(pessoa)
+                }
+            })
+            .catch((err) => res.json(err))
     });
 };
 

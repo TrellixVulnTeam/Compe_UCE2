@@ -2,7 +2,7 @@ const openDb = require('../configdb');
 
 async function createTableEmpresas() {
     openDb().then(db => {
-        db.exec('CREATE TABLE IF NOT EXISTS empresas (id INTEGER PRIMARY KEY, cnpj TEXT, empresa TEXT, categoria TEXT, localizacao TEXT)')
+        db.exec('CREATE TABLE IF NOT EXISTS empresas (id INTEGER PRIMARY KEY, cnpj TEXT, empresa TEXT, categoria TEXT, localizacao TEXT, senha TEXT)')
     });
 };
 
@@ -11,8 +11,9 @@ async function addEmpresa(req, res) {
     let empresa = req.body.empresa;
     let categoria = req.body.categoria;
     let localizacao = req.body.localizacao;
+    let senha = req.body.senha;
     openDb().then(db => {
-        db.run('INSERT INTO empresas (cnpj, empresa, categoria, localizacao) VALUES (?,?,?,?)', [cnpj, empresa, categoria, localizacao])
+        db.run('INSERT INTO empresas (cnpj, empresa, categoria, localizacao) VALUES (?,?,?,?,?)', [cnpj, empresa, categoria, localizacao, senha])
     });
     res.status(200).json({
         "statusCode": 200,

@@ -1,5 +1,5 @@
 function authenticateLogin() {
-    adminCredencial = {
+    const adminCredencial = {
         cpf: 'admin',
         senha: 'admin123'
     }
@@ -12,7 +12,9 @@ function authenticateLogin() {
                 sessionStorage.setItem("userID", data.cpf)
                 document.location.href='/'
             } else if (cpf == adminCredencial.cpf && senha == adminCredencial.senha) {
+                sessionStorage.setItem("userID", data.cpf)
                 document.location.href='/admin'
+                
             }
         })
 }

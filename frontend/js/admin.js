@@ -6,7 +6,8 @@ function adicionarEmpresa() {
              cnpj: document.getElementById('cnpj').value,
              empresa: document.getElementById('empresa').value,
              categoria: document.getElementById('categoria').value,
-             localizacao: document.getElementById('localizacao').value
+             localizacao: document.getElementById('localizacao').value,
+             senha: document.getElementById('senha').value
         })
     }).then(res => {
         return res.json()
