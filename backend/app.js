@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const pess = require('./models/pessoa');
 
 const app = express();
 
@@ -11,9 +12,21 @@ app.use(express.static(path.join(__dirname + '../../frontend')))
 
 const port = process.env.PORT || 3000;
 
+pess.createTable();
+
 //renderizando pagina html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/index.html'))
+    res.sendFile('/index.html');
+})
+
+//renderizando pagina account
+app.get('/account', (req, res) => {
+    res.sendFile('/account.html')
+})
+
+// renderizando pagina suppliers
+app.get('/suppliers', (req, res) => {
+    res.sendFile(path.join(__dirname, '/resultsPage.html'))
 })
 
 //register new 
