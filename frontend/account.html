@@ -7,13 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/87bd687d44.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/geral/reset.css">
-    <link rel="stylesheet" href="./css/geral/base.css">
-    <link rel="stylesheet" href="./css/geral/header.css">
-    <link rel="stylesheet" href="./css/geral/footer.css">
-    <link rel="stylesheet" href="./css/geral/sidebar.css">
-    <link rel="stylesheet" href="./css/account/mainForm.css">
+    <link rel="stylesheet" href="/css/geral/reset.css">
+    <link rel="stylesheet" href="/css/geral/base.css">
+    <link rel="stylesheet" href="/css/geral/header.css">
+    <link rel="stylesheet" href="/css/geral/footer.css">
+    <link rel="stylesheet" href="/css/geral/sidebar.css">
+    <link rel="stylesheet" href="/css/account/mainForm.css">
+    <script src="/js/account.js"></script>
     <title>Fornex</title>
 </head>
 
@@ -35,20 +35,22 @@
     <main class="mainForm"> 
         <div class="container">
             <form class="mainForm__form">
+                <!-- username input -->
                 <div class="mainForm__form__inputs">
                     <label class="mainForm__form__inputs__labels" for="">Username</label>
-                    <input class="mainForm__form__inputs__fields" type="text" placeholder="Username">
+                    <input class="mainForm__form__inputs__fields" type="text" placeholder="Username" id="username">
                 </div>
-
+                <!-- password input -->
                 <div class="mainForm__form__inputs">
                     <label class="mainForm__form__inputs__labels" for="">Password</label>
-                    <input class="mainForm__form__inputs__fields" type="text" placeholder="Password">
+                    <input class="mainForm__form__inputs__fields" type="text" placeholder="Password" id="password">
                     <a class="" href="#">Forgot Password</a>
                 </div>  
-
+                <!-- login button -->
                 <div class="mainForm__form__inputs__login">
-                    <button class="mainForm__form__inputs__fields">LOGIN</button> 
+                    <button class="mainForm__form__inputs__fields" onclick="authenticateLogin()">LOGIN</button> 
                 </div>
+                <!-- create account link -->
                 <a class="" href="createAccount.html">Create Account</a>
             </form>
         </div>
