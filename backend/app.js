@@ -45,17 +45,8 @@ app.get('/api/pegarEmpresas', pess.pegarEmpresas)
 //register new 
 app.post('/api/register', usu.addUsuario)
 
-    // let user = false;
-    // if (user) {
-    //     res.status(200).json({
-    //         mensagem: "User created!"
-    //     });
-    // } else {
-    //     res.status(404).json({
-    //         mensagem: "Error user not created!"
-    //     });
-    // }
-
+//login
+app.get('/api/login/:cpf', usu.loginUsuario)
 
 app.listen(port, () => {
     console.log(`Servidor rodando http://localhost:${port}/`);
