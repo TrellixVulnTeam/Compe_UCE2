@@ -27,6 +27,14 @@ async function pegarEmpresas(req, res) {
     });
 };
 
+async function pegarEmpresa(req, res) {
+    let cnpj = req.params.cnpj;
+    openDb().then(db => {
+        db.get('SELECT * FROM empresas WHERE cnpj=?', [cnpj])
+            .then(empresa => res.json(empresa))
+    });
+}
+
 async function loginUsuario(req, res) {
     let cnpj = req.params.cnpj
     openDb().then(db => {
@@ -48,5 +56,6 @@ module.exports = {
     createTableEmpresas,
     addEmpresa,
     pegarEmpresas,
-    loginUsuario
+    loginUsuario,
+    pegarEmpresa
 }

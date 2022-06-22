@@ -7,20 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/geral/reset.css">
-    <link rel="stylesheet" href="./css/geral/base.css">
-    <link rel="stylesheet" href="./css/geral/header.css">
-    <link rel="stylesheet" href="./css/geral/footer.css">
-    <link rel="stylesheet" href="./css/geral/sidebar.css">
-    <link rel="stylesheet" href="./css/home/search.css">
-    <link rel="stylesheet" href="./css/suppplier/profile.css">
-    <link rel="stylesheet" href="./css/suppplier/contact.css">
-    <link rel="stylesheet" href="./css/suppplier/catalog.css">
-    <link rel="stylesheet" href="./css/suppplier/map.css">
+    <link rel="stylesheet" href="/css/geral/reset.css">
+    <link rel="stylesheet" href="/css/geral/base.css">
+    <link rel="stylesheet" href="/css/geral/header.css">
+    <link rel="stylesheet" href="/css/geral/footer.css">
+    <link rel="stylesheet" href="/css/geral/sidebar.css">
+    <link rel="stylesheet" href="/css/home/search.css">
+    <link rel="stylesheet" href="/css/suppplier/profile.css">
+    <link rel="stylesheet" href="/css/suppplier/contact.css">
+    <link rel="stylesheet" href="/css/suppplier/catalog.css">
+    <link rel="stylesheet" href="/css/suppplier/map.css">
+    <script src="/js/supplierProfile.js"></script>
     <title>Fornex</title>
 </head>
 
-<body>
+<body onload="loadProfile()">
     <header class="header">
         <div class="container header__container">
             <img src="" alt="">
@@ -41,9 +42,10 @@
                 <img src="" alt="">
             </div>
             <div class="profile__container__bottom">
-                <h1>Supplier name</h1>
-                <h1>Location</h1>
-                <h1>Categories</h1>
+                <h1 id="nomeEmpresa"></h1>
+                <h1 id="localizacaoEmpresa"></h1>
+                <h1 id="categoriaEmpresa"></h1>
+                <h1 id="cnpjEmpresa"></h1>
             </div>
         </div>
     </section>

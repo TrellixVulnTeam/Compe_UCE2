@@ -53,6 +53,9 @@ app.post('/api/register', usu.addUsuario)
 //login
 app.get('/api/login/:cnpj', pess.loginUsuario)
 
+//load supplier profile
+app.get('/api/supplierProfile/:cnpj', pess.pegarEmpresa)
+
 app.listen(port, () => {
     console.log(`Servidor rodando http://localhost:${port}/`);
 });
