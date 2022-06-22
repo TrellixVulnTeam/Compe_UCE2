@@ -10,6 +10,7 @@ function authenticateLogin() {
         .then(data => {
             if (cnpj == data.cnpj && senha == data.senha) {
                 sessionStorage.setItem("userID", data.cnpj)
+                document.cookie = "newUser=false"
                 document.location.href='/supplierProfile'
             } else if (cnpj == adminCredencial.cnpj && senha == adminCredencial.senha) {
                 sessionStorage.setItem("userID", data.cnpj)

@@ -17,8 +17,9 @@ pess.createTableEmpresas();
 usu.createTableUsuarios();
 
 //renderizando pagina html
-app.get('/', (req, res) => {
-    res.sendFile('/index.html');
+app.get('/index', (req, res) => {
+    res.setHeader('Set-Cookie', 'newUser=true')
+    res.sendFile(path.join(__dirname, '../frontend/index.html'))
 })
 
 //renderizando pagina account
@@ -57,5 +58,5 @@ app.get('/api/login/:cnpj', pess.loginUsuario)
 app.get('/api/supplierProfile/:cnpj', pess.pegarEmpresa)
 
 app.listen(port, () => {
-    console.log(`Servidor rodando http://localhost:${port}/`);
+    console.log(`Servidor rodando http://localhost:${port}/index`);
 });
